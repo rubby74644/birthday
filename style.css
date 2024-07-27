@@ -1,0 +1,94 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #333;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.container{
+    width: 400px;
+    height: 600px;
+    position: relative;
+    transition: 1s;
+    perspective: 1500;
+}
+
+input{
+    display: none;
+}
+
+.card{
+    width: 100%;
+    height: 100%;
+    border-radius: 0 12px 12px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 1s;
+}
+
+.card label{
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+}
+
+.front{
+    position: absolute;
+    z-index: 2;
+    background: red;
+    transform-origin: center left;
+    background-image: url("https://marketplace.canva.com/EAFYJKGkaTQ/1/0/1600w/canva-white-and-gold-modern-greeting-happy-birthday-card-MAo89x0go4c.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.back{
+    position: relative;
+    z-index: -1;
+    background: green;
+}
+
+.page{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    z-index: 1;
+    gap: 20px;
+    padding: 30px;
+    width: 390px;
+    margin-top: 10px;
+    height: 580px;
+    border-radius: 0 15px 15px 0;
+    background-color: white;
+    font-size: 1.5rem;
+    font-weight: 800;
+}
+
+.b-c-btn{
+    font-size: .9rem;
+}
+
+.first_box{
+    margin-bottom: 20px;
+}
+
+#next_page:checked ~ .container{
+    transform: translateX(200px);
+}
+
+#next_page:checked ~ .container .front{
+    transform: rotateY(-180deg);
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flip Card Cover</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <input type="checkbox" id="next_page">
+    <audio src="happy.mp3" class="song" autoplay loop></audio>
+    <div class="container">
+        <div class="front card">
+            <label for="next_page"></label>
+        </div>
+        <div class="page">
+            <div class="first_box">
+                <code>
+                    <span class="f-t-1">console</span>.<span class="f-t-2">log</span>( <br>
+                    <span class="f-t-3">"Happy Birthday Content"</span> <br> );
+                </code>
+            </div>
+            <div>
+                <div class="top">
+                    <code>! I WISH YOU A HAPPY AND FUN CELEBRATION WITH LOTS OF GREAT REATS. ENJOY YOUR VIBES !
+                    Forget the past; look forward to the future, for the best things are yet to come :)</code>
+                </div>
+            </div>
+            <h1 class="b-c-btn">
+                By Akshdeep74644
+            </h1>
+        </div>
+        <div class="back card"></div>
+    </div>
+
+    <script>
+        var button = document.querySelector(".front")
+        var audio = document.querySelector(".song")
+
+        button.addEventListener("click", ()=>{
+           audio.play()
+        })
+    </script>
+</body>
+</html>
