@@ -86,7 +86,7 @@ input{
 }
 
 #next_page:checked ~ .container{
-    transform: translateX(200px);
+    transform: translateX(0px);
 }
 
 #next_page:checked ~ .container .front{
